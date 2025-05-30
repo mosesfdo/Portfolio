@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-/* Utility class for screen-reader only text */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -12,41 +10,34 @@
     white-space: nowrap;
     border-width: 0;
 }
-
 body, html {
-    overflow: hidden; /* Default for desktop, overridden for mobile */
-    height: 100vh;   /* Default for desktop, overridden for mobile */
+    overflow: hidden;
+    height: 100vh;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4; /* Fallback, overridden below */
-    margin: 0; /* Added to prevent default body margin issues */
+    background-color: #f4f4f4;
+    margin: 0;
     padding: 0;
-    background: black; /* Primary background */
+    background: black;
 }
-
 .container {
     padding: 0px 2%;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-
 .logo {
     width: 140px;
 }
-
 nav ul li {
     display: inline-block;
     margin: 10px 20px;
     list-style: none;
 }
-
 nav ul li a {
     text-decoration: none;
     color: blueviolet;
@@ -54,13 +45,11 @@ nav ul li a {
     position: relative;
     display: inline-block;
 }
-
 nav ul li a:hover {
     color: white;
     text-decoration: none;
     animation: zoom 0.3s ease-in-out;
 }
-
 nav ul li a::after {
     color: white;
     content: " ";
@@ -71,85 +60,66 @@ nav ul li a::after {
     left: 0;
     bottom: -5px;
 }
-
 nav ul li a:hover::after {
     width: 100%;
     transition: width 0.3s ease-in-out;
 }
-
 .header-text {
-    /* Viewport-spanning properties for full-bleed background effect */
-    width: 100vw;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 55%; /* Move hero text further down on desktop */
-    transform: translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
     box-sizing: border-box;
-
-    /* Internal padding to align content, matches .container's initial padding */
     padding-left: 2%;
     padding-right: 2%;
-    
-    /* Flex properties for centering content within .header-text */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    /* Other existing styles */
-    margin-top: 0; /* As position is absolute, margin-top might not be effective here */
     font-size: 30px;
     min-height: 200px;
     height: auto;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
 }
-
 .header-text {
-        /* ...existing code... */
         min-height: 100vh;
         height: 100vh;
         justify-content: center;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-
 .header-text h1, .header-text p {
     text-align: center;
     color: white;
-    width: 100%; /* Occupy 100% of the padded .header-text's width */
-    /* max-width: 800px; */ /* Optional: for better text readability, centered by auto margins */
-    /* margin-left: auto; */   /* Uncomment if using max-width */
-    /* margin-right: auto; */  /* Uncomment if using max-width */
+    width: 100%;
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0%;
+    margin-bottom: 0.1em;
     box-sizing: border-box;
-    
     opacity: 0;
     transform: translateY(30px) scale(0.95);
     animation: fadeInUp 0.7s cubic-bezier(.68,-0.55,.27,1.55) forwards;
 }
-
 .header-text p {
+    margin-top: 5%;
+    margin-bottom: 0;
     animation-delay: 0.2s;
 }
-
 .header-text h1 {
+    margin-top: 0;
+    margin-bottom: 0em;
     animation-delay: 0.5s;
 }
-
 .logo:hover {
     animation: bounce 0.6s;
 }
-
 @keyframes zoom {
     0%   { transform: scale(1); }
     50%  { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
-
 @keyframes bounce {
     0%   { transform: translateY(0); }
     30%  { transform: translateY(-20px); }
@@ -157,15 +127,12 @@ nav ul li a:hover::after {
     70%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
-
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
-
-/* Popup overlay */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -180,12 +147,10 @@ nav ul li a:hover::after {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-
 .popup-overlay.active {
     display: flex;
     opacity: 1;
 }
-
 .popup {
     background: #1a1a1a;
     color: #eaeaea;
@@ -193,19 +158,17 @@ nav ul li a:hover::after {
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     min-width: 300px;
-    max-width: 90vw; /* Slightly reduced from original for better fit */
+    max-width: 90vw;
     text-align: center;
     position: relative;
     transform: scale(0.8);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s;
 }
-
 .popup-overlay.active .popup {
     transform: scale(1);
     opacity: 1;
 }
-
 .popup .close-btn {
     position: absolute;
     top: 10px;
@@ -216,16 +179,13 @@ nav ul li a:hover::after {
     color: #7500c8;
     cursor: pointer;
 }
-
 .popup h2 {
     margin-top: 0;
     color: #7500c8;
 }
-
 .popup p {
     margin-bottom: 0;
 }
-
 .project-cards {
     display: flex;
     gap: 1.5em;
@@ -233,7 +193,6 @@ nav ul li a:hover::after {
     margin-top: 1.5em;
     flex-wrap: wrap;
 }
-
 .project-card {
     background: #2f2f2f;
     color: #cccccc;
@@ -248,33 +207,27 @@ nav ul li a:hover::after {
     transform: translateY(30px) scale(0.95);
     animation: cardFadeIn 0.6s cubic-bezier(.68,-0.55,.27,1.55) forwards;
 }
-
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.25s; }
-
 @keyframes cardFadeIn {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
-
 .project-card:hover {
     transform: translateY(-8px) scale(1.04);
     box-shadow: 0 8px 32px rgba(117,0,200,0.15);
 }
-
 .project-card h3 {
     margin-top: 0;
     color: #7500c8;
     font-size: 1.2em;
 }
-
 .project-card p {
     margin-bottom: 0;
     font-size: 1em;
 }
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -300,15 +253,13 @@ nav ul li a:hover::after {
 .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-
 .header-skills-section {
-    margin-top: 1em;
+    margin-top: 10em;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .skills-heading {
     display: block;
     color: #fff;
@@ -319,7 +270,6 @@ nav ul li a:hover::after {
     letter-spacing: 2px;
     font-weight: 700;
 }
-
 .header-skills {
     margin-top: 2.5em;
     display: flex;
@@ -328,59 +278,48 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
 }
-
 .header-skill {
     background: none;
-    color: #fff; /* For potential text, or if an icon font uses text color */
+    color: #fff;
     padding: 0;
     border-radius: 0;
-    /* font-size: 1px; /* Removed to avoid issues with em units in children */
     font-weight: 500;
     box-shadow: none;
     border: none;
     transition: none;
-    margin: 0; /* Base margin for skill item */
-    line-height: normal; /* Reset from 0 if font-size:1px was used */
-    text-align: center; /* To center the inline-block icon */
+    margin: 0;
+    line-height: normal;
+    text-align: center;
 }
-
 .header-skill .skill-icon {
-    width: 60px;  /* Pixel-based size */
-    height: 60px; /* Pixel-based size */
+    width: 60px;
+    height: 60px;
     vertical-align: middle;
     display: inline-block;
     opacity: 0.98;
     transition: filter 0.2s, opacity 0.2s;
-    /* filter: brightness(0) invert(1) grayscale(1) drop-shadow(0 0 12px #7500c8); */ /* Example filter from original comment */
 }
-
 .header-skill .skill-icon:hover {
     filter: brightness(1) invert(0) grayscale(0) drop-shadow(0 0 16px #fff);
     opacity: 1;
 }
-
 @media (max-width: 900px) {
     .container {
         padding: 0 4%;
     }
     .header-text {
-        /* Update internal padding to match new container alignment for content */
         padding-left: 4%;
         padding-right: 4%;
-
-        /* Original 900px styles, now applied to a relative block */
         font-size: 22px;
         margin-top: 22%;
         min-height: 160px;
         height: calc(100vh - 120px);
-        
-        /* Transition from absolute to relative positioning */
         position: relative;
         top: unset;
         left: unset;
         right: unset;
         transform: unset;
-        width: 100%; /* Ensure it takes full width of its parent (e.g., body) */
+        width: 100%;
     }
     .project-cards {
         flex-direction: column;
@@ -396,34 +335,33 @@ nav ul li a:hover::after {
         gap: 1.5em;
     }
     .header-skill .skill-icon {
-        width: 45px;  /* Adjusted size */
-        height: 45px; /* Adjusted size */
-        margin: 0 8px; /* Example fixed margin */
+        width: 45px;
+        height: 45px;
+        margin: 0 8px;
     }
 }
-
 @media (max-width: 600px) {
     nav {
         flex-direction: row;
-        align-items: flex-start; /* Vertically align logo and hamburger to the top of nav */
+        align-items: flex-start;
         justify-content: space-between;
         position: relative;
-        padding: 10px 0; /* Optional: add some vertical padding to nav bar */
+        padding: 10px 0;
     }
     .logo {
         width: 100px;
-        margin-bottom: 10px; /* Can be adjusted or removed if padding handles spacing */
+        margin-bottom: 10px;
     }
     .hamburger {
         display: flex !important;
         position: absolute;
-        top: 10px;   /* Adjust if nav padding changes, to align with logo */
-        right: 10px; /* 10px from the nav edge. If nav fills container padding, this is fine. */
+        top: 10px;
+        right: 10px;
         margin: 0;
         z-index: 2001;
     }
     nav ul {
-        display: none; /* Initial state, toggled by JS */
+        display: none;
         flex-direction: column;
         gap: 10px;
         width: 100%;
@@ -431,7 +369,7 @@ nav ul li a:hover::after {
         margin: 0;
         background: #1a1a1a;
         position: absolute;
-        top: 60px; /* Adjust based on nav bar height */
+        top: 60px;
         left: 0;
         z-index: 2000;
         box-shadow: 0 4px 16px rgba(0,0,0,0.15);
@@ -446,69 +384,63 @@ nav ul li a:hover::after {
         opacity: 1;
     }
     .header-text {
-        /* Inherits position:relative, width:100%, padding-left/right:4% from 900px */
         padding-top: 1em;
         padding-bottom: 2em;
         min-height: 80vh;
         height: auto;
-        justify-content: flex-start; /* Content aligns to top */
-        /* display, flex-direction, align-items inherited */
+        justify-content: flex-start;
     }
     .header-text h1, .header-text p {
-        /* width: 100vw; */ /* REMOVED THIS, was causing overflow */
-        width: 100%;     /* Correct: Takes 100% of the padded .header-text */
-        margin-top: 1.2em;
-        margin-bottom: 1.2em;
-        /* text-align: center; inherited */
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0.1em;
     }
     .popup {
-        min-width: 90vw; /* Slightly reduced for better spacing */
-        max-width: 95vw; /* Slightly reduced for better spacing */
-        padding: 1.5em 1em; /* Adjusted padding for smaller popups */
+        min-width: 90vw;
+        max-width: 95vw;
+        padding: 1.5em 1em;
         box-sizing: border-box;
     }
     .project-cards {
-        /* flex-direction: column; align-items: center; gap: 1em; already set at 900px */
         width: 100%;
         margin-left: 0;
         margin-right: 0;
         box-sizing: border-box;
     }
     .project-card {
-        min-width: 90vw; /* Was 80vw at 900px, adjust as needed */
-        max-width: 96vw; /* Was 95vw at 900px, adjust as needed */
-        width: 100%; /* Ensures it uses available space within min/max */
+        min-width: 90vw;
+        max-width: 96vw;
+        width: 100%;
         font-size: 0.95em;
         padding: 1em 0.7em;
         box-sizing: border-box;
-        margin: 0 auto; /* Centering the card */
+        margin: 0 auto;
     }
     .header-skills {
-        flex-direction: row; /* Default, but explicit */
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 1.5em;         /* Adjusted from original 2.9em for potentially better fit */
+        gap: 1.5em;
         width: 100%;
         align-items: center;
         justify-content: center;
-        margin: 0 auto; /* The block itself is centered if parent allows */
-        padding: 0 1em;     /* Add some padding so icons don't touch screen edges */
+        margin: 0 auto;
+        padding: 0 1em;
         box-sizing: border-box;
     }
     .header-skill {
-        width: 6%; /* Let content (icon + its own padding/margin) define width */
-        /* max-width: 50vw; /* Cleared: Use flex-basis or specific widths if needed */
-        margin: 1em;     /* REVISED: Was 10% 0 (very large vertical margin) */
+        width: 6%;
+        margin: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .header-skill .skill-icon {
-        width: 55px;  /* Increased size for mobile visibility */
-        height: 55px; /* Increased size for mobile visibility */
-        margin: 0 auto; /* Centering icon within .header-skill if it's block */
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
         display: block;
     }
-    html, body { /* Crucial for enabling scroll on mobile */
+    html, body {
         overflow: auto !important;
         height: auto !important;
     }
