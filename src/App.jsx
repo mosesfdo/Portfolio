@@ -1,5 +1,8 @@
 import React from 'react'
-import './App.css' // Assuming you have a CSS file for styling
+import './App.css'
+import animeMe from './assets/Images/anime-me.png'
+import LinkedInIcon from './assets/Images/linkedin.svg'
+import GitHubIcon from './assets/Images/github.svg'
 
 function App() {
   return (
@@ -21,13 +24,13 @@ function App() {
           <div className="cta-buttons">
             <a href="https://www.linkedin.com/in/mosesfdo" target="_blank" rel="noopener noreferrer">
               <button className="btn">
-                <img src="./src/assets/Images/linkedin.svg" alt="LinkedIn" />
+                <img src={LinkedInIcon} alt="LinkedIn" />
                 linkedin
               </button>
             </a>
             <a href="https://github.com/mosesfdo" target="_blank" rel="noopener noreferrer">
               <button className="btn">
-                <img src="./src/assets/Images/github.svg" alt="Github" />
+                <img src={GitHubIcon} alt="Github" />
                 Github
               </button>
             </a>
@@ -35,7 +38,7 @@ function App() {
         </div>
 
         <div>
-          <img src="./src/assets/Images/anime-me.png" alt="Description of image" className="anime-image" />
+          <img src={animeMe} alt="Description of image" className="anime-image" />
         </div>
 
 
