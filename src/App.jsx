@@ -1,10 +1,53 @@
 import React from 'react'
+import './App.css' // Assuming you have a CSS file for styling
 
 function App() {
   return (
     <div className="App">
-      Hello World!
-      <p>This is a simple React application.</p>
+      
+      <section id="home" className="home-section wrapper">
+        <div className="intro-text">
+          <div className="intro-text-main">
+            <h1 className='name'>I'm Moses</h1>
+            <p>Full Stack Developer</p>
+          </div>
+          <div className="description">
+            <p>
+              Most students pick one, design or code. I chose both.
+              <br />
+              3 years building real skills across AI, frontend, and engineering.
+              </p>
+          </div>
+          <div className="cta-buttons">
+            <a href="https://www.linkedin.com/in/mosesfdo" target="_blank" rel="noopener noreferrer">
+              <button className="btn">
+                <img src="./src/assets/Images/linkedin.svg" alt="LinkedIn" />
+                linkedin
+              </button>
+            </a>
+            <a href="https://github.com/mosesfdo" target="_blank" rel="noopener noreferrer">
+              <button className="btn">
+                <img src="./src/assets/Images/github.svg" alt="Github" />
+                Github
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <img src="./src/assets/Images/anime-me.png" alt="Description of image" className="anime-image" />
+        </div>
+
+
+      </section>
+
+
+
+
+
+
+
+
     </div>
   )
 }
