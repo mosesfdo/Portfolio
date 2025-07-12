@@ -10,13 +10,13 @@
 }
 
 html{
-  scroll-behavior: smooth;;
+  scroll-behavior: smooth;
 }
 
 body{
   font-family: "Aspekta", sans-serif;
   overflow-x: hidden;
-  background-color: rgb(20, 20, 20);
+  background-color: #121212;
   color: #ebebeb;
 }
   

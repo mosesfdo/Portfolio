@@ -1,7 +1,4 @@
-@font-face {
-    font-family:'aspekta';
-    src: url();
-}
+
 
 @font-face {
     font-family: 'Aspekta-100';
@@ -58,6 +55,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "SCHABO";
+    src: url('./assets/Fonts/SCHABO-XCondensed.otf') format('opentype');
+}
+
+
 section{
     height: 100vh;
     width: 100%
@@ -67,146 +70,143 @@ section{
 
 .wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-
-.home-section {
-    display: flex;
+.hero-section {
     align-items: center;
     justify-content: center;
-    gap: 100px;
-}
-
-
-.name{
-    font-family: "Aspekta-800", sans-serif;
-    font-size: 2.5rem;
-    font-size: clamp(2.5rem, 2rem + 2.5vw, 5rem);
-}
-
-.intro-text-main p{
-    font-family: "Aspekta-400", sans-serif;
-    color:#b7b7b7;
-    font-size: 1.2rem;
-    margin-left: 5px;
-}
-
-.description {
-    font-family: "Aspekta-400", sans-serif;
-    color: #d6d6d6;
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.96rem + 0.19999999999999996vw, 1.2rem);
-    margin-top: 10px;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-    padding-top: 30px;
-
-}
-
-
-.btn {
-    border: none;
-    background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
-    color: #101010;
-    padding: 8px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: "Aspekta-700", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s, transform 0.2s;
+    height: 100vh;
     position: relative;
-    display: inline-flex;
-    align-items: center;
+    overflow: hidden;
+}
+
+
+.hero-text {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
     justify-content: center;
-    gap: 8px;
+    align-items: center;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.btn img{
-    height: 20px;
-    width: 20px;
-    position: static;
-    transform: none;
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    min-height: 100vh;
+    padding: 4rem 0;
+    margin-top: 0;
 }
 
-.anime-image {
-    width: 500px;
-    height:500px;
-    background-color: rgb(25, 25, 25);
-    border-radius: 50%;
-    border: 2px solid #ebebeb16;
-    box-shadow:  0px 0px 26px 0px rgba(177, 175, 177, 0.039);
+.row-one{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-
-.project-section {
-  border: #b7b7b7 1px solid;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 250px;
-  padding: 20px 0;
+.row-two{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-image{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.projects-caption {
+  text-align: center;
+  color: #fff;
+  font-family: 'Aspekta-400', sans-serif;
+  font-size: 1.1rem;
+  max-width: 900px;
+  letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 768px) {
 
-
-
-.three-section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-
-
-@media (max-width: 768px) {
-    .home-section {
-        flex-direction:  column-reverse;
-        text-align: center;
-        gap: 40px;
+    .anime-img{
+        display: none;
     }
 
-    .anime-image {
-        width: 300px;
-        height: 300px;
+    .projects-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 2rem 0;
     }
-    .description{
-        width: 400px;
-    }
-
-    .cta-buttons {
-        flex-direction: row;
+    
+    .row-one{
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .row-two{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .projects-caption{
+        max-width: 500px;
+        padding: 0 1rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+    
+    .projects-section {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .row-one, .row-two {
+        gap: 1.5rem;
+    }
+    
+    .projects-caption {
+        max-width: 100%;
+        padding: 0 0.5rem;
+        font-size: 1rem;
     }
 }
