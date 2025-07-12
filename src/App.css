@@ -157,8 +157,9 @@ section{
   border: #b7b7b7 1px solid;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
-  gap: 200px;
+  gap: 250px;
   padding: 20px 0;
 }
 

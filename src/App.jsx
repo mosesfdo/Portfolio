@@ -3,7 +3,6 @@ import './App.css'
 import animeMe from './assets/Images/anime-me.png'
 import LinkedInIcon from './assets/Images/linkedin.svg'
 import GitHubIcon from './assets/Images/github.svg'
-import ProjectBar from './assets/Components/ProjectBar/ProjectBar.jsx'
 import aboutImage from './assets/Images/ha.jpg'
 
 function App() {
@@ -40,17 +39,6 @@ function App() {
 
         <div>
           <img src={animeMe} alt="Description of image" className="anime-image" />
-        </div>
-      </section>
-
-
-      <section className="project-section wrapper" id="projects">
-        <div className="projects-header">
-          <h2>Projects</h2>
-          <p>Here are some of my recent projects</p>
-        </div>
-        <div className="project-list">
-          <ProjectBar />
         </div>
       </section>
 
