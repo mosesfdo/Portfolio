@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'Aspekta-100';
     src: url('./assets/Fonts/Aspekta-100.ttf') format('truetype');
@@ -57,14 +55,15 @@
 
 @font-face {
     font-family: "SCHABO";
-    src: url('./assets/Fonts/SCHABO-XCondensed.otf') format('opentype');
+    src: url('./assets/Fonts/SCHABO-XCondensed.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 section{
     height: 100vh;
-    width: 100%
-    ;
+    width: 100%;
 }
 
 
@@ -133,6 +132,77 @@ section{
   max-width: 900px;
   letter-spacing: 0.5px;
 }
+
+.about-img {
+    width: 100%; /* Adjusted width to ensure responsiveness */
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-name{
+    display: inline-block;
+    height: fit-content;
+}
+
+.about-description{
+    font-family: 'Aspekta-200', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    width: 100%;
+    max-width: 2500px;
+}
+
+.about-buttons{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 10px;
+}
+
+.about-buttons a{
+    text-decoration: none;
+    color: #161616;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+.a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+
+}
+
+.github-link,.linedin-link{
+    padding: 20px 20px;
+    border-radius: 100%;
+},
+
+
 
 @media screen and (max-width: 768px) {
 
