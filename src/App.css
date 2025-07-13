@@ -110,32 +110,13 @@ section{
 
 .projects-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
     gap: 3rem;
-    min-height: 100vh;
-    padding: 4rem 0;
-    margin-top: 0;
+    padding: 2rem 0;
 }
 
-.row-one{
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.row-two{
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 .about-section {
     min-height: 100vh;
@@ -163,8 +144,6 @@ section{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 2rem;
-        padding: 2rem 0;
     }
     
     .row-one{
@@ -208,5 +187,9 @@ section{
         max-width: 100%;
         padding: 0 0.5rem;
         font-size: 1rem;
+    }
+
+    section{
+        height: auto;   
     }
 }
