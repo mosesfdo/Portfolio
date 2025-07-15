@@ -7,55 +7,67 @@
     src: url('../../Fonts/Morganite/Morganite-Black.ttf') format('truetype');
 }
 
-.hero-img-overlay {
-   display: none;
+@font-face {
+    font-family: "Eiko";
+    src: url('../../Fonts/eiko/PPEiko-Heavy.otf') format('truetype');
 }
 
-.big-text{
+
+
+ .big-text{
+    z-index: 0;
+    color: rgba(54, 54, 54, 0.851);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 5px;
+}
+
+
+
+.bg-top-element{
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.bg-main-element{
+    font-size: 300px;
 }
 
 .bg-main-element h1{
+    font-family: "Morganite-Black", sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
-    font-size: 30vw;
-    font-family: 'Morganite-Black';
-    font-weight: 100;
-    letter-spacing: 1px;
-    line-height: 1;
-    display: block;
-}
-
-.bg-top-element {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-    width: 100%;
-    margin-right: 60px;
-    margin-bottom: 5px;
-    font-family: "Sofia Sans Condensed", sans-serif;
-    font-size: 2vw;
-    font-weight: 800;
 }
 
 .bg-bottom-element{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+    
 }
 
 .bottom-left-element{
+    width: 100%;
+    max-width: 200px;
+    font-size: 0.7rem;
     font-family: "Poppins", sans-serif;
-    font-size: 1vw;
     text-align: left;
-    width: 400px;
-    margin-top: 5px;
-    margin-left: 5px;
     font-weight: 500;
+    margin-left: 5px;
+    
+}
+
+.bottom-right-element{
+    margin-right: 10px;
+    font-family:"Eiko", sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
 }

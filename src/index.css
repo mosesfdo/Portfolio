@@ -14,8 +14,8 @@ html::selection{
 }
 
 body{
-
-    background-color: #000000;
+    overflow-x: hidden;
+    background-color: #050505;
     color: #ffffff;
 }
 
