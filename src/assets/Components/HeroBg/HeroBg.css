@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Morganite-Black";
+    src: url('../../Fonts/Morganite/Morganite-Black.ttf') format('truetype');
+}
+
+.hero-img-overlay {
+   display: none;
+}
+
+.big-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-main-element h1{
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    font-size: 30vw;
+    font-family: 'Morganite-Black';
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1;
+    display: block;
+}
+
+.bg-top-element {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    margin-right: 60px;
+    margin-bottom: 5px;
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+.bg-bottom-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.bottom-left-element{
+    font-family: "Poppins", sans-serif;
+    font-size: 1vw;
+    text-align: left;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: 500;
+}
