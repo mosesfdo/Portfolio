@@ -18,12 +18,20 @@
     margin: 10px 100px;
 }
 
+
 .left-elements {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+
 }
+
+.left-elements h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 
 .skills ul{
     list-style:none;
@@ -31,4 +39,23 @@
 .skills ul li {
     display: inline;
     margin-right: 20px;
+    font-size: 1.2rem;
+    color: rgb(172, 172, 172);
+}
+.right-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(172, 172, 172);
+    font-size: 1.2rem;
+}
+
+.right-elements img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }

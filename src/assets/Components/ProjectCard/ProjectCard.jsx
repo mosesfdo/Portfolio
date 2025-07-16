@@ -1,6 +1,7 @@
 import React from 'react'
 import './ProjectCard.css'
 import lightbar from '../../Images/lightbar.png'
+import arrow from '../../Images/arrow.svg'
 
 
 const ProjectCard = ({ projecttitle, skill1, skill2, skill3 }) => {
@@ -20,7 +21,8 @@ const ProjectCard = ({ projecttitle, skill1, skill2, skill3 }) => {
         
 
         <div className="right-elements">
-            <p>Read More</p>
+            <a href="#">Read More </a>
+            <img src={arrow} alt="Arrow" />
         </div>
         </div>
         <img src={lightbar} alt="Project Thumbnail" className="project-thumbnail" />
