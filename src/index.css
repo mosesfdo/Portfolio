@@ -19,3 +19,16 @@ body{
     color: #ffffff;
 }
 
+section {
+    width: 100vw;              /* Full viewport width */
+    min-height: 100vh;         /* At least full viewport height */
+    display: flex;             /* Flexbox for easy alignment */
+    flex-direction: column;    /* Stack children vertically */
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+    padding: 2rem 1rem;        /* Responsive padding */
+    box-sizing: border-box;    /* Include padding in width/height */
+    background: inherit;       /* Inherit background if needed */
+    overflow-x: hidden;        /* Prevent horizontal scroll */
+    position: relative;        /* For positioning child elements */
+}

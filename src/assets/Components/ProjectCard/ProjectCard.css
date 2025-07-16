@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Aspekta';
+    src: url('../../Fonts/Morganite/Aspekta-200.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.project-card {
+    font-family: "Aspekta", sans-serif;
+    font-weight: 200;
+
+}
+
+.project-card-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 10px 100px;
+}
+
+.left-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills ul{
+    list-style:none;
+}
+.skills ul li {
+    display: inline;
+    margin-right: 20px;
+}
