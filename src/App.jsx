@@ -18,29 +18,32 @@ const App = () => {
           <img src={heroimg} alt="Hero" className="hero-image" />
         </div>
       </section>
-
-      <section id="about" className="about-section wrapper">
-      </section>
       
       <section id="projects" className="projects-section wrapper">
+        <div className="project-top-element">
+        <p>"These projects were developed either during my learning process or as part of college coursework."</p>
+        </div>
         <img src={lightbar} alt="" />
         <ProjectCard 
         projecttitle={"React Portfolio"}
           skill1="React"
           skill2="JavaScript"
           skill3="CSS"
+          link="https://github.com/mosesfdo/Portfolio-react"
         />
         <ProjectCard 
-        projecttitle={"Temporary Email Generator"}
+        projecttitle={"TempMail"}
           skill1="HTML"
           skill2="JavaScript"
           skill3="CSS"
+          link="https://github.com/mosesfdo/TempMail"
         />
         <ProjectCard 
-        projecttitle={"Spotify Music Downloader"}
+        projecttitle={"TuneGrab"}
           skill1="Python"
           skill2="yt-dlp"
           skill3="Custom"
+          link="https://github.com/mosesfdo/tunegrab"
         />
       </section>
     </div>
